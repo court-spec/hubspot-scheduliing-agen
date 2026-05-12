@@ -7,11 +7,8 @@
     "poll": "node src/poll-office-investigations.js",
     "test": "node src/poll-office-investigations.js --dry-run"
   },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "license": "UNLICENSED"
 }

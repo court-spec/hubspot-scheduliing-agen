@@ -11,8 +11,6 @@
  * Required env var: HUBSPOT_TOKEN
  */
 
-import fetch from 'node-fetch';
-
 // ── Config ────────────────────────────────────────────────────────────────────
 
 const PORTAL_ID       = '245172784';
