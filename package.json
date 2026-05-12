@@ -1,0 +1,17 @@
+{
+  "name": "wtg-office-investigation-poller",
+  "version": "1.0.0",
+  "description": "Polls HubSpot Office Investigation Form submissions and creates custom-object records",
+  "main": "src/poll-office-investigations.js",
+  "scripts": {
+    "poll": "node src/poll-office-investigations.js",
+    "test": "node src/poll-office-investigations.js --dry-run"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
