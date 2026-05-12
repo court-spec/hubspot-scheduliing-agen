@@ -134,7 +134,7 @@ async function getLatestInvestigationDate() {
 
 async function fetchFormSubmissions() {
   const url =
-    `${BASE_URL}/marketing/v3/forms/${FORM_ID}/submissions?limit=50`;
+    `${BASE_URL}/form-integrations/v1/submissions/forms/${FORM_ID}?limit=50`;
 
   const res = await fetch(url, { headers: HEADERS });
   if (!res.ok) {
