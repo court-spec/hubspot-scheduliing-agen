@@ -1,0 +1,24 @@
+name: Poll Office Investigation Form
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # allows manual trigger from GitHub UI
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm install
+
+      - name: Run poller
+        env:
+          HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
+        run: node src/poll-office-investigations.js
